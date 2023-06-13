@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from __future__ import unicode_literals
+ 
 
 from django.utils.translation import override
 from aldryn_events.models import Event

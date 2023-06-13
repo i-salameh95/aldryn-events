@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
 
-from __future__ import unicode_literals
+ 
 
 from django.core.urlresolvers import NoReverseMatch
 from django.utils.translation import (
     get_language_from_request,
-    ugettext_lazy as _,
+    gettext_lazy as _,
 )
 
 from cms.menu_bases import CMSAttachMenu

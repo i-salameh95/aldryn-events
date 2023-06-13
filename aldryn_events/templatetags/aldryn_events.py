@@ -8,7 +8,7 @@ from django.template.loader import get_template
 from django.utils.dates import MONTHS
 from django.utils import timezone
 from django.utils.translation import (
-    ugettext_lazy as _, get_language_from_request,
+    gettext_lazy as _, get_language_from_request,
 )
 from cms.utils.i18n import force_language
 

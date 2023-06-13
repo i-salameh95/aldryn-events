@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
 
-from __future__ import unicode_literals
+ 
 
 from django.core.exceptions import ImproperlyConfigured
 from django.core.urlresolvers import reverse
 from django.utils.translation import (
-    ugettext_lazy as _,
+    gettext_lazy as _,
     get_language_from_request,
 )
 
