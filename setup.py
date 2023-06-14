@@ -3,24 +3,24 @@ from setuptools import setup, find_packages
 from aldryn_events import __version__
 
 REQUIREMENTS = [
-    'aldryn-apphooks-config>=0.4.0',
+    'aldryn-apphooks-config==0.6.0',
     'aldryn-boilerplates',
-    'aldryn-common>=0.0.6',
-    'aldryn-translation-tools>=0.2.1',
+    'aldryn-common==1.0.5',
+    'aldryn-translation-tools==0.3.0',
     'django-appconf',
-    'django-appdata>=0.2.0',
+    'django-appdata==0.3.2',
     'django-bootstrap3',
     'django-cms>=3.4',
     'django-extended-choices',
     'django-filer',
-    'django-parler>=1.6.1',
-    'django-sortedm2m>=1.2.2',
+    'django-parler==2.3',
+    'django-sortedm2m==3.1.1',
     'django-standard-form>=1.1.1',
     'django-tablib',
     'djangocms-text-ckeditor',
     'python-dateutil',
     'six',
-    'Django>=1.8,<2',
+    'Django>=1.11',
 ]
 
 # https://pypi.python.org/pypi?%3Aaction=list_classifiers
