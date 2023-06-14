@@ -95,7 +95,7 @@ class Event(TranslatedAutoSlugifyMixin,
         ),
         meta={'unique_together': (('language_code', 'slug'),)}
     )
-    app_config = models.ForeignKey(EventsConfig, verbose_name=_('app_config'))
+    app_config = models.ForeignKey(EventsConfig, verbose_name=_('app_config'), on_delete=models.CASCADE)
 
     objects = EventManager()
 
@@ -284,7 +284,7 @@ class Registration(models.Model):
         max_length=32
     )
 
-    event = models.ForeignKey(Event)
+    event = models.ForeignKey(Event, on_delete=models.CASCADE)
     salutation = models.CharField(
         _('Salutation'), max_length=5, choices=SALUTATIONS,
         default=SALUTATIONS.SALUTATION_FEMALE
@@ -315,7 +315,7 @@ class Registration(models.Model):
 
 
 class BaseEventPlugin(CMSPlugin):
-    app_config = models.ForeignKey(EventsConfig, verbose_name=_('app_config'))
+    app_config = models.ForeignKey(EventsConfig, verbose_name=_('app_config'), on_delete=models.CASCADE)
 
     # Add an app namespace to related_name to avoid field name clashes
     # with any other plugins that have a field with the same name as the
