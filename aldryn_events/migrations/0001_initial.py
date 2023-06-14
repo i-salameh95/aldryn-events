@@ -51,7 +51,7 @@ class Migration(migrations.Migration):
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
                 ('name', models.CharField(max_length=200, blank=True)),
                 ('email', models.EmailField(max_length=80, blank=True)),
-                ('user', models.ForeignKey(null=True, blank=True, to=settings.AUTH_USER_MODEL, unique=True, verbose_name='user')),
+                ('user', models.ForeignKey(null=True, blank=True, to=settings.AUTH_USER_MODEL, unique=True, verbose_name='user',on_delete=models.CASCADE)),
             ],
             options={
             },
@@ -79,7 +79,7 @@ class Migration(migrations.Migration):
                 ('location_lat', models.FloatField(null=True, verbose_name='location latitude', blank=True)),
                 ('location_lng', models.FloatField(null=True, verbose_name='location longitude', blank=True)),
                 ('language_code', models.CharField(max_length=15, db_index=True)),
-                ('master', models.ForeignKey(related_name='translations', editable=False, to='aldryn_events.Event', null=True)),
+                ('master', models.ForeignKey(related_name='translations', editable=False, to='aldryn_events.Event', null=True, on_delete=models.CASCADE)),
             ],
             options={
                 'abstract': False,
@@ -105,7 +105,7 @@ class Migration(migrations.Migration):
                 ('mobile', models.CharField(default='', max_length=20, verbose_name='Mobile number', blank=True)),
                 ('email', models.EmailField(max_length=75, verbose_name='E-Mail')),
                 ('message', models.TextField(default='', verbose_name='Message', blank=True)),
-                ('event', models.ForeignKey(to='aldryn_events.Event')),
+                ('event', models.ForeignKey(to='aldryn_events.Event', on_delete=models.CASCADE)),
             ],
             options={
             },

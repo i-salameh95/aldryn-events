@@ -42,7 +42,7 @@ class Migration(migrations.Migration):
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
                 ('language_code', models.CharField(db_index=True, max_length=15, verbose_name='Language', choices=[('en', 'en'), ('de', 'de')])),
                 ('app_title', models.CharField(max_length=234, verbose_name='application title')),
-                ('master', models.ForeignKey(related_name='translations', editable=False, to='aldryn_events.EventsConfig', null=True)),
+                ('master', models.ForeignKey(related_name='translations', editable=False, to='aldryn_events.EventsConfig', null=True, on_delete=models.CASCADE)),
             ],
             options={
                 'managed': True,
@@ -60,25 +60,25 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='eventcalendarplugin',
             name='app_config',
-            field=models.ForeignKey(verbose_name='app_config', to='aldryn_events.EventsConfig', null=True),
+            field=models.ForeignKey(verbose_name='app_config', to='aldryn_events.EventsConfig', null=True, on_delete=models.CASCADE),
             preserve_default=True,
         ),
         migrations.AddField(
             model_name='event',
             name='app_config',
-            field=models.ForeignKey(verbose_name='app_config', to='aldryn_events.EventsConfig', null=True),
+            field=models.ForeignKey(verbose_name='app_config', to='aldryn_events.EventsConfig', null=True, on_delete=models.CASCADE),
             preserve_default=True,
         ),
         migrations.AddField(
             model_name='eventlistplugin',
             name='app_config',
-            field=models.ForeignKey(verbose_name='app_config', to='aldryn_events.EventsConfig', null=True),
+            field=models.ForeignKey(verbose_name='app_config', to='aldryn_events.EventsConfig', null=True, on_delete=models.CASCADE),
             preserve_default=True,
         ),
         migrations.AddField(
             model_name='upcomingpluginitem',
             name='app_config',
-            field=models.ForeignKey(verbose_name='app_config', to='aldryn_events.EventsConfig', null=True),
+            field=models.ForeignKey(verbose_name='app_config', to='aldryn_events.EventsConfig', null=True, on_delete=models.CASCADE),
             preserve_default=True,
         ),
     ]
