@@ -14,16 +14,16 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='eventcalendarplugin',
             name='cmsplugin_ptr',
-            field=models.OneToOneField(parent_link=True, related_name='aldryn_events_eventcalendarplugin', primary_key=True, serialize=False, to='cms.CMSPlugin'),
+            field=models.OneToOneField(parent_link=True, related_name='aldryn_events_eventcalendarplugin', primary_key=True, serialize=False, to='cms.CMSPlugin', on_delete=models.CASCADE),
         ),
         migrations.AlterField(
             model_name='eventlistplugin',
             name='cmsplugin_ptr',
-            field=models.OneToOneField(parent_link=True, related_name='aldryn_events_eventlistplugin', primary_key=True, serialize=False, to='cms.CMSPlugin'),
+            field=models.OneToOneField(parent_link=True, related_name='aldryn_events_eventlistplugin', primary_key=True, serialize=False, to='cms.CMSPlugin',on_delete=models.CASCADE),
         ),
         migrations.AlterField(
             model_name='upcomingpluginitem',
             name='cmsplugin_ptr',
-            field=models.OneToOneField(parent_link=True, related_name='aldryn_events_upcomingpluginitem', primary_key=True, serialize=False, to='cms.CMSPlugin'),
+            field=models.OneToOneField(parent_link=True, related_name='aldryn_events_upcomingpluginitem', primary_key=True, serialize=False, to='cms.CMSPlugin',on_delete=models.CASCADE),
         ),
     ]

@@ -60,7 +60,7 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='EventListPlugin',
             fields=[
-                ('cmsplugin_ptr', models.OneToOneField(parent_link=True, auto_created=True, primary_key=True, serialize=False, to='cms.CMSPlugin')),
+                ('cmsplugin_ptr', models.OneToOneField(parent_link=True, auto_created=True, primary_key=True, serialize=False, to='cms.CMSPlugin', on_delete=models.CASCADE)),
                 ('style', models.CharField(default='standard', max_length=50, verbose_name='Style', choices=[('standard', 'Standard')])),
                 ('events', sortedm2m.fields.SortedManyToManyField(help_text=None, to='aldryn_events.Event', null=True, blank=True)),
             ],
@@ -114,7 +114,7 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='UpcomingPluginItem',
             fields=[
-                ('cmsplugin_ptr', models.OneToOneField(parent_link=True, auto_created=True, primary_key=True, serialize=False, to='cms.CMSPlugin')),
+                ('cmsplugin_ptr', models.OneToOneField(parent_link=True, auto_created=True, primary_key=True, serialize=False, to='cms.CMSPlugin', on_delete=models.CASCADE)),
                 ('past_events', models.BooleanField(default=False, verbose_name='selection', choices=[(False, 'future events'), (True, 'past events')])),
                 ('style', models.CharField(default='standard', max_length=50, verbose_name='Style', choices=[('standard', 'Standard')])),
                 ('latest_entries', models.PositiveSmallIntegerField(default=5, help_text='The number of latests events to be displayed.', verbose_name='latest entries')),
