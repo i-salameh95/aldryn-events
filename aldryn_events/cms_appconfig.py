@@ -11,7 +11,7 @@ from cms.models.fields import PlaceholderField
 from parler.models import TranslatableModel, TranslatedFields
 
 
-@python_2_unicode_compatible
+  
 class EventsConfig(TranslatableModel, AppHookConfig):
     """Adds some translatable, per-app-instance fields."""
     translations = TranslatedFields(
