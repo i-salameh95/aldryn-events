@@ -8,7 +8,7 @@ import string
 from django.conf import settings
 from django.contrib.auth.models import AnonymousUser
 from django.core.cache import cache
-from django.core.urlresolvers import reverse, clear_url_caches
+from django.urls import reverse, clear_url_caches
 
 from django.test import RequestFactory, TransactionTestCase
 from django.utils.timezone import get_current_timezone

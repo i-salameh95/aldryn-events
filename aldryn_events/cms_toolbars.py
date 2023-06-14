@@ -3,7 +3,7 @@
  
 
 from django.core.exceptions import ImproperlyConfigured
-from django.core.urlresolvers import reverse
+from django.urls import reverse
 from django.utils.translation import (
     gettext_lazy as _,
     get_language_from_request,

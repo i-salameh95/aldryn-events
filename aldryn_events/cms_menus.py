@@ -2,7 +2,7 @@
 
  
 
-from django.core.urlresolvers import NoReverseMatch
+from django.urls import NoReverseMatch
 from django.utils.translation import (
     get_language_from_request,
     gettext_lazy as _,

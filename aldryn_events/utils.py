@@ -6,7 +6,7 @@ import six
 from cms.utils.i18n import force_language, get_language_object
 from django.contrib.sites.models import Site
 from django.core.mail import send_mail
-from django.core.urlresolvers import reverse, NoReverseMatch
+from django.urls import reverse, NoReverseMatch
 from django.db.models import Q
 from django.template.loader import render_to_string
 from django.utils import timezone
